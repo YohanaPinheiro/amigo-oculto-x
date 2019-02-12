@@ -1,0 +1,10 @@
+<%= link_to "Cadastrar um amigo", new_amigo_path, :class => 'btn btn-primary' %>
+
+<ul>
+  <% @amigos.each do |amigo| %>
+    <li> <%= link_to amigo.nome, edit_amigo_path(amigo) %> 
+       - <%= amigo.email %> </li>
+  <% end %>
+</ul>
+
+<%= link_to "Fazer sorteio", 'sortear', class: 'btn btn-default' %>
